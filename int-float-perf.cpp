@@ -9,9 +9,9 @@
 template <typename Number>
 void fib(const long max) {
     Number a = 1;
-    Number b = 1;
+    Number b = 2;
     for (long i = 0; i != max; ++i) {
-        const Number c = a + b;
+        const Number c = a * b;
         a = b;
         b = c;
     }
