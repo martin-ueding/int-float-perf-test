@@ -41,7 +41,7 @@ template <typename Number> void take_measurement() {
     std::ofstream out{"data-" + name<Number>() + ".txt"};
     for (int thread_count = 1;
          thread_count <= 2 * std::thread::hardware_concurrency();
-         thread_count *= 2) {
+         ++thread_count) {
         auto start_time = std::chrono::steady_clock::now();
         std::vector<std::thread> threads;
 
